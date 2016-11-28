@@ -19,7 +19,8 @@
     {% endfor %}
     {% for img in site.data.images offset:2  limit:2 %}
       <div class="non-critital-img unit unit-xs-1 m-1-2">
-        <div class="embed-item" data-src="images/{{img}}" alt="" hidden>
+        <div class="embed embed-16by9">
+          <img class="embed-item" data-src="images/{{img}}" alt="" hidden>
         <noscript>
           <img class="embed-item" src="images/{{img}}" alt="">
         </noscript>
@@ -35,5 +36,6 @@
     {% endfor %}
   </div>
 
+  <script>{% inlcude_relative js/image-loader.js %}</script>
 </body>
 </html>
